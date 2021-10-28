@@ -1,0 +1,43 @@
+body {
+    background-color: #f8f9fa;
+}
+
+table {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.table th {
+    padding: 1em;
+}
+
+.title-header {
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto 2em auto;
+    padding: 2em 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #fff
+}
+
+a:hover {
+    color: #fff;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-label {
+    margin-top: 15px
+}

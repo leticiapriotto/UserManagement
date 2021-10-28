@@ -1,4 +1,5 @@
 <?php
+namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
 
@@ -13,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/users', '\App\Http\Controllers\UserController@indexUsers')->name('users');
-Route::get('/users/{id}', '\App\Http\Controllers\UserController@showUser')->name('user');
+Route::get('/users/{id}', '\App\Http\Controllers\UserController@showUser')->name('userId');
+
+// Route::get('/assinante/vagas',"JobOpeningController@indexSubscriber");
+// Route::post('/assinante/vagas',"JobOpeningController@storeSubscriber");
+// Route::get('/assinante/vagas/{id}',"JobOpeningController@showSubscriber");
+
+// Route::get('/assinante/vagas/edit/{id}',"JobOpeningController@editSubscriber");
+// Route::put('/assinante/vagas/{id}',"JobOpeningController@updateSubscriber");
+
+// Route::delete('/assinante/vagas/{id}',"JobOpeningController@destroySubscriber");
