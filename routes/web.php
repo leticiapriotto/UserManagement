@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::get('/users', '\App\Http\Controllers\UserController@indexUsers')->name('users');
-Route::get('/users/{id}', '\App\Http\Controllers\UserController@showUser')->name('userId');
+Route::get('/users/create', '\App\Http\Controllers\UserController@createUser')->name('createUser');
+Route::post('/users/create/store', '\App\Http\Controllers\UserController@storeUser')->name('storeUser');
+Route::get('/users/show/{id}', '\App\Http\Controllers\UserController@showUser');
+Route::put('/users/show/update/{id}', '\App\Http\Controllers\UserController@updateUser');
+Route::delete('/users/show/delete/{id}', '\App\Http\Controllers\UserController@deleteUser');
