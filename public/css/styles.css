@@ -33,11 +33,34 @@ a:hover {
     color: #fff;
 }
 
-.title-container {
+.container-fx-sa {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-fx-sb {
     display: flex;
     justify-content: space-between;
 }
 
+.container-fx-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.container-fx-buttons button {
+    margin-left: 10px;
+}
+
+.btn-outline-dark {
+    border: 0px;
+}
+
 .form-label {
     margin-top: 15px
+}
+
+.btn-submit button {
+    margin-top: 25px;
+    padding: 6px 5em;
 }

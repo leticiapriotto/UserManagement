@@ -1,8 +1,21 @@
 @extends('layouts.structure')
 @section('content')
 
+@if(session()->has('messageNewUser'))
+<div class="alert alert-success text-center">
+    {{ session()->get('messageNewUser') }}
+</div>
+@endif
+
+@if(session()->has('messageDeletedUser'))
+<div class="alert alert-danger text-center">
+    {{ session()->get('messageDeletedUser') }}
+</div>
+@endif
+
+@if (!$users->isEmpty())
 <table class="table table-borderless">
-    <thead class="table-secondary">
+    <thead class="table-secondary text-center">
         <tr>
             <th scope="col">Name</th>
             <th scope="col">CPF</th>
@@ -18,7 +31,7 @@
     
     <tbody>
         @foreach ( $users as $user )
-        <tr class="text-center">
+        <tr class="text-center align-middle">
             <td>{{ $user->name }}</td>
             <td>{{ $user->cpf }}</td>
             <td>{{ $user->birth_date }}</td>
@@ -28,11 +41,16 @@
             <td>{{ $user->city }}</td>
             <td>{{ $user->state }}</td>
             <td><button class="btn btn-dark">
-                <a href="/users/{{ $user->id }}"> Show </a>
+                <a href="/users/show/{{ $user->id }}"> Show </a>
             </button></td>
         </tr>
         @endforeach
     </tbody>
 </table>
+@else 
+<div class="alert alert-secondary text-center">
+    There are no registered users
+</div>
+@endif
 
 @endsection

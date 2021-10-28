@@ -11,8 +11,15 @@
 </head>
 <body>
     <header>
-        <div class="text-center title-header">
-            <h1>User Management</h1>
+        <div class="title-header">
+            <div class="text-center">
+                <h1>User Management</h1>
+            </div>
+    
+            <div class="container-fx-sa">
+                <a href="{{ route('createUser') }}"><button class="btn btn-outline-dark"> Create User</button></a>
+                <a href="{{ route('users') }}"><button class="btn btn-outline-dark">Show all users</button></a>
+            </div>
         </div>
     </header>
 
