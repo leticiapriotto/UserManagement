@@ -24,13 +24,17 @@ table {
     margin: auto;
 }
 
-a {
+.btn a {
     text-decoration: none;
     color: #fff
 }
 
-a:hover {
+.btn a:hover {
     color: #fff;
+}
+
+.pagination a {
+    color: black;
 }
 
 .container-fx-sa {

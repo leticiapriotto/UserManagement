@@ -53,4 +53,8 @@
 </div>
 @endif
 
+<div class="pagination justify-content-center">
+    {{ $users->links() }}
+</div>
+
 @endsection

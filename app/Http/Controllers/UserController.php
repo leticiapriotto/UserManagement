@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreUpdateUserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -9,7 +10,7 @@ class UserController extends Controller
 {
     public function indexUsers()
     {
-        $users = User::get();
+        $users = User::simplePaginate(10);
         return view('user.index', compact('users'));
     }
     
@@ -24,7 +25,7 @@ class UserController extends Controller
         return view('user.create');
     }
 
-    public function storeUser(Request $request)
+    public function storeUser(StoreUpdateUserRequest $request)
     {
         $users = User::get();
         User::create([
@@ -43,7 +44,7 @@ class UserController extends Controller
         return redirect('/users')->with('messageNewUser', 'New user created successfully');
     }
 
-    public function updateUser(Request $request, $id)  
+    public function updateUser(StoreUpdateUserRequest $request, $id)  
     {
         User::where('id', $id)->update ([
 

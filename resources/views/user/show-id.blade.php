@@ -27,42 +27,51 @@
     @csrf
     <div class="col-md-8">
         <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control disabledInput" name="name" id="name" value="{{ $userId->name }}" disabled >
+        <input type="text" class="form-control @error('name') is-invalid @enderror @error('name') is-invalid @enderror" name="name" id="name" value="{{ $userId->name }}" disabled >
+        @error('name')<div class="invalid-feedback">{{$message}}</div>@enderror
     </div>
 
     <div class="col-md-4">
         <label for="cpf" class="form-label">CPF</label>
-        <input type="text" class="form-control disabledInput" name="cpf" id="cpf" value="{{ $userId->cpf }}" disabled >
+        <input type="text" class="form-control @error('cpf') is-invalid @enderror" name="cpf" id="cpf" value="{{ $userId->cpf }}" disabled >
+        @error('cpf')<div class="invalid-feedback">{{$message}}</div>@enderror
     </div>
 
     <div class="col-md-6">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control disabledInput" name="email" id="email" value="{{ $userId->email }}" disabled >
+        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" value="{{ $userId->email }}" disabled >
+        @error('email')<div class="invalid-feedback">{{$message}}</div>@enderror
+        
     </div>
 
     <div class="col-md-3">
         <label for="birth_date" class="form-label">Birth Date</label>
-        <input type="date" class="form-control disabledInput" name="birth_date" id="birth_date" value="{{ $userId->birth_date }}" disabled >
+        <input type="date" class="form-control @error('birth_date') is-invalid @enderror" name="birth_date" id="birth_date" value="{{ $userId->birth_date }}" disabled >
+        @error('birth_date')<div class="invalid-feedback">{{$message}}</div>@enderror
     </div>
 
     <div class="col-md-3">
         <label for="phone_number" class="form-label">Phone Number</label>
-        <input type="text" class="form-control disabledInput" name="phone_number" id="phone_number" value="{{ $userId->phone_number }}" disabled >
+        <input type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" id="phone_number" value="{{ $userId->phone_number }}" disabled >
+        @error('phone_number')<div class="invalid-feedback">{{$message}}</div>@enderror
     </div>
 
     <div class="col-md-6">
         <label for="address" class="form-label">Address</label>
-        <input type="text" class="form-control disabledInput" name="address" id="address" value="{{ $userId->address }}" disabled >
+        <input type="text" class="form-control @error('address') is-invalid @enderror" name="address" id="address" value="{{ $userId->address }}" disabled >
+        @error('address')<div class="invalid-feedback">{{$message}}</div>@enderror
     </div>
 
     <div class="col-md-3">
         <label for="city" class="form-label">City</label>
-        <input type="text" class="form-control disabledInput" name="city" id="city" value="{{ $userId->city }}" disabled >
+        <input type="text" class="form-control @error('city') is-invalid @enderror" name="city" id="city" value="{{ $userId->city }}" disabled >
+        @error('city')<div class="invalid-feedback">{{$message}}</div>@enderror
     </div>
 
     <div class="col-md-3">
         <label for="state" class="form-label">State</label>
-        <input type="text" class="form-control disabledInput" name="state" id="state" value="{{ $userId->state }}" disabled >
+        <input type="text" class="form-control @error('state') is-invalid @enderror" name="state" id="state" value="{{ $userId->state }}" disabled >
+        @error('state')<div class="invalid-feedback">{{$message}}</div>@enderror
     </div>
 
     <div class="btn-submit" id="btn-submit" style="display: none;">
