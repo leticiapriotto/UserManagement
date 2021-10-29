@@ -11,7 +11,7 @@
 
     <div class="col-md-4">
         <label for="cpf" class="form-label">CPF</label>
-        <input type="text" class="form-control @error('cpf') is-invalid @enderror" name="cpf" id="cpf" placeholder="000.000.000-00">
+        <input type="text" class="form-control @error('cpf') is-invalid @enderror" name="cpf" id="cpf" maxlength="14" onkeypress="maskCpf(this, mcpf);" onblur="maskCpf(this, mcpf);" placeholder="000.000.000-00">
         @error('cpf')<div class="invalid-feedback">{{$message}}</div>@enderror
     </div>
 
@@ -29,7 +29,7 @@
 
     <div class="col-md-3">
         <label for="phone_number" class="form-label">Phone Number</label>
-        <input type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" id="phone_number" placeholder="(00) 00000-0000">
+        <input type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" id="phone_number" onkeypress="maskPhone(this, mphone);" onblur="maskPhone(this, mphone);" placeholder="(00) 00000-0000">
         @error('phone_number')<div class="invalid-feedback">{{$message}}</div>@enderror
     </div>
 
